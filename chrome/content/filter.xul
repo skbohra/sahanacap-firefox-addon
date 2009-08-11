@@ -1,0 +1,52 @@
+<?xml version="1.0"?> 
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://identicanotifier/content/sahanacapnotifier.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://identicanotifier/locale/sahanacapnotifier.filter.properties.dtd">
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="identicanotifier-filter"
+        onload="IdenticaNotifierFilter.onLoad();"
+	onunload="IdenticaNotifierFilter.onUnLoad();"
+        ondialogaccept="IdenticaNotifierFilter.onSubmit();"
+	ondialogcancel="IdenticaNotifierFilter.onCancel();"
+        buttons="accept,cancel"
+        title="&identicanotifier.title;" style="padding:0px;"
+        persist="screenX screenY">
+
+<script type="application/x-javascript" src="chrome://identicanotifier/content/utility.js"/>
+<script type="application/x-javascript" src="chrome://identicanotifier/content/filter.js"/>  
+
+ 
+  <vbox align="center" style="border-bottom: 1px solid #999; padding-bottom: 3px; background: #fff">
+    <description style="padding-top: 10px" id="message" value=""/>
+  </vbox>
+
+  <groupbox flex="1">
+  <caption label="&identicanotifier.choose.category;"/>
+  <hbox align="center">
+  <vbox><checkbox id="safety" label="&identicanotifier.safety;" /></vbox>
+  <vbox><checkbox id="met" label="&identicanotifier.met;" /></vbox>
+  <vbox> <checkbox id="health" label="&identicanotifier.health;" /></vbox>
+  </hbox>  
+  </groupbox>
+   <groupbox flex="1">
+  <caption label="&identicanotifier.display.alerts;"/>
+  <hbox align="center">
+  <menulist id="days" >
+  	<menupopup>
+  <menuitem  value="1" label="&identicanotifier.today;"/>
+  <menuitem  value="7" label="&identicanotifier.sevendays;"/>
+  <menuitem  value="15" label="&identicanotifier.fifteendays;"/>
+  <menuitem  value="30" label="&identicanotifier.onemonth;"/>
+  <menuitem  value="365" label="&identicanotifier.oneyear;"/>
+</menupopup>
+  </menulist>
+
+  
+  </hbox>  
+  </groupbox>
+</dialog>
+

@@ -1,0 +1,11 @@
+<!ENTITY identicanotifier.title "SahanaFox Filter Options">
+<!ENTITY identicanotifier.choose.category "Choose Category">
+<!ENTITY identicanotifier.display.alerts "Display Alerts From">
+<!ENTITY identicanotifier.safety "Safety">
+<!ENTITY identicanotifier.met "Met">
+<!ENTITY identicanotifier.health "Health">
+<!ENTITY identicanotifier.today "Today">
+<!ENTITY identicanotifier.sevendays "Last 7 days">
+<!ENTITY identicanotifier.fifteendays "Last 15 days">
+<!ENTITY identicanotifier.onemonth "Last 1 month">
+<!ENTITY identicanotifier.oneyear "Last 1 year">
