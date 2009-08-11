@@ -1,0 +1,20 @@
+<!ENTITY identicanotifier.showpopup "Show popup">
+<!ENTITY identicanotifier.update "Update Alerts Now">
+<!ENTITY identicanotifier.markAllAsRead "Mark all as read">
+<!ENTITY identicanotifier.preference "Preferences...">
+<!ENTITY identicanotifier.linkButton.tooltip "Insert current tab&apos;s URL">
+<!ENTITY identicanotifier.recent.tooltip "Show your friends timeline">
+<!ENTITY identicanotifier.replies.tooltip "Show replies">
+<!ENTITY identicanotifier.messages.tooltip "Show direct messages">
+<!ENTITY identicanotifier.enterStatus.tooltip "Enter to update your status">
+<!ENTITY identicanotifier.replyButton.tooltip "Send Reply">
+<!ENTITY identicanotifier.favoriteButton.tooltip "Toggle favorite">
+<!ENTITY identicanotifier.logo.tooltip "Go to Sahana">
+<!ENTITY identicanotifier.changeAccount.tooltip "Click to change account">
+<!ENTITY identicanotifier.closeButton.tooltip "Close window">
+<!ENTITY identicanotifier.copyDent "Copy">
+<!ENTITY identicanotifier.redent "Tweet This Alert">
+<!ENTITY identicanotifier.deleteDent "Delete this Alert">
+<!ENTITY identicanotifier.openDentInTab "Open this Alert in new tab">
+<!ENTITY identicanotifier.clickToStart "Click to Start">
+<!ENTITY identicanotifier.filter "Filter Options">

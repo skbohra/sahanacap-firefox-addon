@@ -1,0 +1,3 @@
+content	identicanotifier	chrome/content/
+overlay	chrome://browser/content/browser.xul	chrome://identicanotifier/content/sahanacapnotifier.xul
+locale identicanotifier en-US chrome/locale/en-US/
