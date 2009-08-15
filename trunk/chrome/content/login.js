@@ -133,14 +133,7 @@ const IdenticaNotifierLogin = {
    if (!this.promptSubscriptionDialog(url, msg)) return;
 
     
-    
-    /*for (var i = 0; i < list.itemCount; ++i) {
-      if (list.getItemAtIndex(i).value == url.value) {
-        var err = this.strings.getFormattedString("AccountAlreadyExist", [url.value]);
-        alert(err);
-        return;
-      }
-  }*/
+
     this.url = url.value;
     if(!url.value.match("([^\s]+(?=\.(xml|atom|rss))\.\2)")){
    		this.urls[0]=url.value;
@@ -175,18 +168,10 @@ const IdenticaNotifierLogin = {
       request.onload    = function(p) {
       switch (Number(request.status)) {
      case 400:
-      //this.rateLimitExceeded(req);
-    	return;
+      return;
       break;
 
-    case 401:
-      /*if (req.callback == "statuses_friends_timeline" ||
-          !this.dispatchError(req)) {
-        this._accounts[this._user] = null;
-        this._user = null;
-        this._pass = null;
-        this.notifyStatus("authFail");
-      }*/
+     case 401:
       break;
 
     case 403:
@@ -207,11 +192,8 @@ const IdenticaNotifierLogin = {
     
       var item = list.appendItem(dataArray["title"], url);
       item.setAttribute("type","checkbox");
-      
-      //list.selectItem(item);
- 		this.updateButtonState();
- 		
-      }
+    		this.updateButtonState();
+ 	  }
       }
     
     this.fetchOneByOne();

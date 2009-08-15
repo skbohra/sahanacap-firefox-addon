@@ -46,7 +46,8 @@
 	</menu>
 	<menuseparator/>-->
 	<menuitem id="identicanotifier-menuitem-preference" label="&identicanotifier.preference;" oncommand="gIdenticaNotifier.onPreference(event)" />
-	<menuitem id="identifcanotifier-menuitem-filter" label="&identicanotifier.filter;" oncommand="gIdenticaNotifier.onFilterOptions(event)" />
+	<menuitem id="identicanotifier-menuitem-filter" label="&identicanotifier.filter;" oncommand="gIdenticaNotifier.onFilterOptions(event)" />
+    <menuitem id="identicanotifier-menuitem-disable" label="&identicanotifier.disable;" oncommand="gIdenticaNotifier.onDisable(event)" type="checkbox" checked="false" />  
       </menupopup>
     </popupset>
 
