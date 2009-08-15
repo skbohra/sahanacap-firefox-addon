@@ -25,7 +25,7 @@ IdenticaNotifier.prototype = {
 
     this.initKeyConfig();
     
-    // Don't init IdentiFox when the window is popup.
+    // Don't init SahanaFox when the window is popup.
     if (window.toolbar.visible == false) {
       var btn = this.$("identicanotifier-statusbar-button");;
       var parent = btn.parentNode;
@@ -43,8 +43,11 @@ IdenticaNotifier.prototype = {
 
     // Setup menuitem
     var menu = this.$("identicanotifier-menuitem-togglepopup");
+    var disable = this.$("identicanotifier-menuitem-disable");
     this._showBalloon = this._util.pref().getBoolPref("popup");
+    this._disable = this._util.pref().getBoolPref("disable");
     menu.setAttribute("checked", this._showBalloon);
+    disable.setAttribute("checked", this._disable);
 
     this._popup = this.$("identicanotifier-popup");
 
@@ -492,6 +495,15 @@ IdenticaNotifier.prototype = {
     return true;
   	
   },
+  
+    onDisable: function(e){
+   	var menu = this.$("identicanotifier-menuitem-disable");
+    this._disable = !this._disable;
+    menu.setAttribute("checked", this._disable);
+    this._util.pref().setBoolPref("disable", this._disable);
+  	
+  },
+  
   
   onTogglePopup: function(e) {
     var menu = this.$("identicanotifier-menuitem-togglepopup");

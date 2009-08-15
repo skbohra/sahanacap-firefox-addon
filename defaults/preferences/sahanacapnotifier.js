@@ -14,3 +14,4 @@ pref("extensions.identicanotifier.met", true);
 pref("extensions.identicanotifier.safety", true);
 pref("extensions.identicanotifier.health", true);
 pref("extensions.identicanotifier.days", "7");
+pref("extensions.identicanotifier.disable", false);

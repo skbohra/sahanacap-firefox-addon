@@ -57,7 +57,9 @@ IdenticaNotifier.prototype = {
   updatePref: function() {
     var pref = Components.classes['@mozilla.org/preferences-service;1']
       .getService(Components.interfaces.nsIPrefBranch);
-
+	var disable = pref.getBoolPref("extensions.identicanotifier.disable");
+	if(disable=="false")
+	{
     this._interval = pref.getIntPref("extensions.identicanotifier.interval") * 60 * 1000;
     // fail safe
     if (this._interval < 180 * 1000) {
@@ -69,7 +71,12 @@ IdenticaNotifier.prototype = {
     }
     var type = Components.interfaces.nsITimer.TYPE_REPEATING_SLACK;
     this.setDelayTask(this._interval,"updateDents",null,type);
-   
+	}
+	else
+	{
+		return true;
+		
+	}
   },
 
   setNextTimer: function() {
@@ -165,7 +172,9 @@ IdenticaNotifier.prototype = {
   this.fetchOneByOne();  
   },
   
-  
+  //
+  //sending alert notifications one by one
+  //
   
   fetchOneByOne: function(){
     
@@ -185,6 +194,10 @@ IdenticaNotifier.prototype = {
     request.asyncOpen();
 	}
   },
+  
+  //
+  //function checks for any new alert
+  //
   
   getRecent: function() {
   	
@@ -218,17 +231,11 @@ IdenticaNotifier.prototype = {
 
   
   markRead: function(obj) {
-   /* var type = obj.type;
-    for (var i in this._accounts[this._user][type]) {
-      this._accounts[this._user][type][i].unread = false;
-    }*/
+   
   },
 
   markAllRead: function() {
-    /*var types = ['timeline', 'replies', 'messages'];
-    for (var i in types) {
-      this.markRead({type:types[i]});
-    }*/
+   
   },
   
   playSound: function() {
@@ -251,7 +258,7 @@ IdenticaNotifier.prototype = {
     }
   },
 
-
+  //
   // Network handler
   //
   onLoad: function(request, url, total_entries) {
