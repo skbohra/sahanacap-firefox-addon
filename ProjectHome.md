@@ -1,0 +1,1 @@
+This project is a part of CAP aggregator Sahana Summer of Code 2009 project, it aims to develop a firefox addon based on identicanotifer addon, to read CAP alerts.
